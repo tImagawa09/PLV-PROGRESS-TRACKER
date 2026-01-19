@@ -1,4 +1,12 @@
+/**
+ * アプリ全体設定
+ */
 const CONFIG = {
-  LINE_CHANNEL_ACCESS_TOKEN: "YOUR_TOKEN",
-  LINE_CHANNEL_SECRET: "YOUR_SECRET",
+  MAIN_SHEET: "シート1",
+  LOG_SHEET: "進捗確認",
+  PLV_TABLE: "マスタ_PLv表",
+  NEXT_EXP_CELL: "A9",
+  DAYS_TO_999_CELL: "E9",
+  DATE_FORMAT: "yyyy/MM/dd",
+  LINE_TOKEN: "YOUR_TOKEN"
 };
