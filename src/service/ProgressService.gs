@@ -84,3 +84,6 @@ function getSummaryReport(days) {
     `・記録日数：${recentRows.length}日`
   ].join("\n");
 }
+
+
+

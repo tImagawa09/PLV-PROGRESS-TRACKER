@@ -24,3 +24,19 @@ function generateProgressReport() {
     `・999到達見込み：${daysTo999}日`
   ].join("\n");
 }
+
+/** ===============================
+ * メイン：日次進捗更新
+ * =============================== */
+function updateDailyValues() {
+    ProgressService_recordToday();
+}
+
+/**
+ * 999到達目標
+ */
+function getGoalEstimate() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("シート1");
+  const est = sheet.getRange("E9").getValue();
+  return `🚀 999到達見込み：${est || "計算中"}`;
+}
