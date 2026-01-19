@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  gas:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace
+      - ~/.clasprc.json:/root/.clasprc.json
+    tty: true
+    stdin_open: true

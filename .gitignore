@@ -1,0 +1,16 @@
+# clasp
+.clasp.json
+.clasprc.json
+
+# node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# GAS secrets
+src/config/Config.gs
+
+# env
+.env
