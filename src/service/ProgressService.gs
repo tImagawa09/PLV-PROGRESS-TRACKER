@@ -85,5 +85,13 @@ function getSummaryReport(days) {
   ].join("\n");
 }
 
+/**
+ * 外部から呼ばれるエントリ（手動ボタン/トリガー/LINE記録後など）
+ * 中身はサービス層の正規関数に委譲するだけ
+ */
+function updateDailyValues() {
+  ProgressService_recordToday();
+}
+
 
 

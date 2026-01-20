@@ -11,8 +11,9 @@ function generateProgressReport() {
   const formattedDate = formatDate(date);
 
   // 「必要楽曲数」を取得
-  const songsNeededMasterPlus = main.getRange("B9").getValue();
-  const songsNeededForte = main.getRange("B13").getValue();
+  const songsNeededMasterPlus = main.getRange(CONFIG.SONGS_NEEDED_MASTER_PLUS_CELL).getValue();
+  const songsNeededForte = main.getRange(CONFIG.SONGS_NEEDED_FORTE_CELL).getValue();
+
 
   return [
     `📊 進捗レポート（${formattedDate}）`,
@@ -25,18 +26,11 @@ function generateProgressReport() {
   ].join("\n");
 }
 
-/** ===============================
- * メイン：日次進捗更新
- * =============================== */
-function updateDailyValues() {
-    ProgressService_recordToday();
-}
-
 /**
  * 999到達目標
  */
 function getGoalEstimate() {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("シート1");
-  const est = sheet.getRange("E9").getValue();
+  const sheet = getSheet(CONFIG.MAIN_SHEET);
+  const est = sheet.getRange(CONFIG.DAYS_TO_999_CELL).getValue();
   return `🚀 999到達見込み：${est || "計算中"}`;
 }
