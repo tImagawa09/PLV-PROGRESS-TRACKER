@@ -19,43 +19,14 @@
 ### 1. リポジトリをクローン
 
 ```bash
-git clone https://github.com/yourname/plv-progress-tracker.git
+git clone git@github.com:tImagawa09/PLV-PROGRESS-TRACKER.git
 cd plv-progress-tracker
 ```
 
 ### 2. 設定ファイルの作成
-#### 2-1. Configファイルを作成
+サンプルをコピーし、`LINE_TOKEN` などを自分の値に書き換えます。
 ```bash
-cp src/config/Config.sample.gs src/config/Config.gs
-```
-```javascript
-/**
- * アプリ全体設定
- */
-const CONFIG = {
-  MAIN_SHEET: "シート1",
-  LOG_SHEET: "進捗確認",
-  PLV_TABLE: "マスタ_PLv表",
-  NEXT_EXP_CELL: "A9",
-  DAYS_TO_999_CELL: "E9",
-  SONGS_NEEDED_MASTER_PLUS_CELL: "B9",
-  SONGS_NEEDED_FORTE_CELL: "B13",
-  DATE_FORMAT: "yyyy/MM/dd",
-  LINE_TOKEN: "your_token"
-};
-```
-
-#### 2-2. Config.gsを編集
-```javascript
-const CONFIG = {
-  MAIN_SHEET: "シート1",
-  LOG_SHEET: "進捗確認",
-  PLV_TABLE: "マスタ_PLv表",
-  NEXT_EXP_CELL: "A9",
-  DAYS_TO_999_CELL: "E9",
-  DATE_FORMAT: "yyyy/MM/dd",
-  LINE_TOKEN: "Your_TOKEN" # 自身のLINE_TOKENに変更
-};
+cp Config.sample.gs src/config/Config.gs
 ```
 | 注意: Config.gs は .gitignore に含まれており、Git 管理外です。
 
